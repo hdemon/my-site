@@ -16,13 +16,13 @@ marked.setOptions({
 
 const top = {
   path: 'index.html',
-  templatePath: './top.pug',
+  templatePath: './templates/top.pug',
   data: {}
 }
 
-const articles = 
+const articles =
   fs.readdirSync('./articles')
-    .map(path => ({
+    .map(path =>({
       path: `articles/${path.replace(/\.md$/, '.html')}`,
       templatePath: `articles/${path}`,
       data: {}

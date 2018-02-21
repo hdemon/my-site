@@ -1,10 +1,11 @@
 {
-  "name": "my-site",
+  "name": "masamin.space",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/server.js & watch -p 'templates/**/*.pug' -c 'npm run render'",
+    "render": "node src/render.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,15 @@
   },
   "homepage": "https://github.com/hdemon/my-site#readme",
   "dependencies": {
+    "express": "^4.16.2",
     "handlebars": "^4.0.11",
     "highlight.js": "^9.12.0",
     "marked": "^0.3.9",
     "pug": "^2.0.0-rc.4",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1",
+    "watch-cli": "^0.2.3"
   }
 }
